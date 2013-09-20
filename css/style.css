@@ -1,0 +1,50 @@
+body {
+    background-color: #ccc;
+    margin: 0 30px;
+    padding: 0;
+}
+
+header {
+    background-color: #444;
+    box-shadow: 0 -40px 50px -20px #000 inset;
+    height: 100px;
+    color: #fff;
+    line-height: 100px;
+    padding: 0 30px;
+    margin: 0 -30px;
+    font-size: 50px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+header .color {
+    color: #ff5100;
+}
+
+form {
+    padding-bottom: 30px;
+}
+
+.error {
+    background-color: #ff5100;
+    color: #fff;
+    width: 80%;
+    line-height: 40px;
+    margin: 30px auto;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.empty {
+    color: #444;
+}
+
+article {
+    margin: 30px 0;
+    border-top: 1px groove #fff;
+}
+
+footer {
+    margin-top: 30px;
+    padding: 5px 0;
+    border-top: 1px groove #fff;
+}

@@ -6,23 +6,23 @@ class XsolveRssFilter
 
     public function __construct($url)
     {
-        echo "Adres: " . $url . "\n\n";
         $this->url = $url;
     }
 
-    public function get_messages($filter = "")
+    public function get_messages($keyword = "")
     {
         $feed = $this->_get_feed();
-        $filtered_feed = $this->_filter_feed($filter, $feed);
+        $filtered_feed = $this->_filter_feed($keyword, $feed);
         unset($feed);
-        echo $filtered_feed[0]->content . "\n------\n";
         return $filtered_feed;
     }
 
     public function render_node($node, $template)
     {
-        var_dump($node);
-        return "---\n\n";
+        foreach ($node as $node_name => $item) {
+            $template = str_replace("[" . $node_name . "]", $item, $template);
+        }
+        return $template . "\n";
     }
 
     private function _get_feed()
