@@ -46,8 +46,8 @@ class XsolveRssFilter
         $xml = new SimpleXMLElement($feed);
         foreach ($xml->channel->item as $item) {
             if (
-                strpos($item->description, $keyword) !== false ||
-                strpos($item->title, $keyword) !== false
+                stripos($item->description, $keyword) !== false ||
+                stripos($item->title, $keyword) !== false
             ) {
                 $filtered_feed[] = $item;
             }
